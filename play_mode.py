@@ -38,6 +38,7 @@ def init():
     # 소년과 볼 사이에 대한 충돌 검사가 필요하다는 정보를 추가.
 
     game_world.add_collision_pair('boy:ball', boy, None)
+    game_world.add_collision_pair('boy:zombie', boy, None)
     for ball in balls:
         game_world.add_collision_pair('boy:ball', None, ball)
 
@@ -46,6 +47,7 @@ def init():
 
     for zombie in zombies:
         game_world.add_collision_pair('zombie:ball', zombie, None)
+        game_world.add_collision_pair('boy:zombie', None, zombie)
 
 def update():
     game_world.update()
