@@ -49,7 +49,6 @@ FRAMES_PER_ACTION = 8
 
 
 
-
 class Idle:
 
     def __init__(self, boy):
